@@ -3,7 +3,7 @@
   <groupId>com.swisscom.ais</groupId>
   <artifactId>pdfbox-ais</artifactId>
   <versioning>
-    <release>1.2.3</release>
+    <release>1.2.3-aivo</release>
     <versions>
       <version>1.0.3</version>
       <version>1.0.4</version>
@@ -12,7 +12,8 @@
       <version>1.2.1</version>
       <version>1.2.2</version>
       <version>1.2.3</version>
+      <version>1.2.3-aivo</version>
     </versions>
-    <lastUpdated>20210830070038</lastUpdated>
+    <lastUpdated>20241105175240</lastUpdated>
   </versioning>
 </metadata>
