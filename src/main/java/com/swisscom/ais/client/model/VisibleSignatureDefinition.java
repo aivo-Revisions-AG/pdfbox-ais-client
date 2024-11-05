@@ -9,6 +9,8 @@ public class VisibleSignatureDefinition {
     private int page = 0;
     private String iconPath;
 
+    private String customTemplatePath;
+
     public VisibleSignatureDefinition(){}
     public VisibleSignatureDefinition(int x, int y, int width, int height, int page, String iconPath){
         this.setX(x);
@@ -17,6 +19,11 @@ public class VisibleSignatureDefinition {
         this.setHeight(height);
         this.setPage(page);
         this.setIconPath(iconPath);
+    }
+    
+    public VisibleSignatureDefinition(int page, String customTemplatePath) {
+        this.setPage(page);
+        this.setCustomTemplatePath(customTemplatePath);
     }
 
     public String getIconPath() {
@@ -65,5 +72,13 @@ public class VisibleSignatureDefinition {
 
     public void setWidth(int width) {
         this.width = width;
+    }
+
+    public String getCustomTemplatePath() {
+        return customTemplatePath;
+    }
+
+    public void setCustomTemplatePath(String customTemplatePath) {
+        this.customTemplatePath = customTemplatePath;
     }
 }

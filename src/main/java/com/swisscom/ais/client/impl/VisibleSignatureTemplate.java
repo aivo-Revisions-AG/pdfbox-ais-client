@@ -6,6 +6,7 @@ import java.awt.geom.Rectangle2D;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
@@ -44,6 +45,11 @@ public class VisibleSignatureTemplate {
     }
 
     public InputStream getContent(PDDocument srcDoc, PDSignature signature) throws IOException {
+        String customTemplatePath = signatureDefinition.getCustomTemplatePath();
+        if (customTemplatePath != null) {
+            // use custom template
+            return new FileInputStream(customTemplatePath);
+        } 
         // create a visible signature at the specified coordinates
         Rectangle2D
             humanRect =
